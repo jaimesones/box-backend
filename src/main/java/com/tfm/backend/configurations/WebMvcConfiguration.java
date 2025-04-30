@@ -10,7 +10,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("http://localhost:4200", "https://cener-frontend.onrender.com", "https://www.comuniwat.info")
+                .allowedOrigins("http://localhost:4200", "https://box-frontend.onrender.com", "https://www.comuniwat.info")
                 .maxAge(3600);
     }
 }

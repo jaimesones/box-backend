@@ -50,7 +50,7 @@ public class UserResource {
         return new UserDto(this.userService.findUser(token));
     }
     
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 720000)
     public void pingReply() {
         try {
             restTemplate.getForObject(SELF_URL, String.class);

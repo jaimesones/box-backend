@@ -43,7 +43,7 @@ public class UserSeederDev {
         this.subscriptionRepository = subscriptionRepository;
         this.invoiceRepository = invoiceRepository;
         this.databaseStarting = databaseStarting;
-        this.deleteAllAndInitializeAndSeedDataBase();
+        //this.deleteAllAndInitializeAndSeedDataBase();
     }
 
     public void deleteAllAndInitializeAndSeedDataBase() {

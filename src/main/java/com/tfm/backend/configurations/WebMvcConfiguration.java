@@ -11,7 +11,8 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedMethods("*")
                 .allowedOrigins("http://localhost:4200", "https://box-frontend.netlify.app")
-                .allowedHeaders("*")  
+                .allowedHeaders("*")
+                .allowCredentials(true)
                 .maxAge(3600);
     }
 }

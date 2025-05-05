@@ -10,7 +10,8 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("http://localhost:4200", "https://box-frontend.netlify.app/")
+                .allowedOrigins("http://localhost:4200", "https://box-frontend.netlify.app")
+                .allowedHeaders("*")  
                 .maxAge(3600);
     }
 }

@@ -9,7 +9,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedMethods("*")
+        		.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedOrigins("http://localhost:4200", "https://box-frontend.netlify.app")
                 .allowedHeaders("*")
                 .allowCredentials(true)

@@ -40,6 +40,7 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().authorizeRequests().antMatchers(HttpMethod.POST,"/users/token/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/customers/create").permitAll()
+                .antMatchers(HttpMethod.GET, "/users/ping").permitAll()
                 .anyRequest().authenticated()
                 .and().addFilter(jwtAuthorizationFilter());
     }
